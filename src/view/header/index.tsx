@@ -14,7 +14,10 @@ const Header = () => {
                 </div>
                 <div className="flex flex-col">
                     <p className="font-sans text-xs">ALAMAT PENGANTARAN</p>
-                    <p className="font-sans text-xl font-bold">Tokopedia Tower</p>
+                    <div className="flex flex-row">
+                        <p className="font-sans text-xl font-bold">Tokopedia Tower</p>
+                        <img className="" src={image.down} width={30} height={30} />
+                    </div>
                 </div>
             </div>
             <div className="px-4">
