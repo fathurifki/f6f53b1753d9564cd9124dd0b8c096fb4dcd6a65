@@ -18,9 +18,10 @@ const Header = ({ onClickModal, selectedDay, addressDestination, isMobile }: any
                     </div>
                 </div>
             </div>
-            <div className="px-4">
+            <div className={`${isMobile ? "px-6" : "px-4"}`}>
                 <DatePickers selectDate={selectedDay} />
             </div>
+            <hr className="w-full" />
         </React.Fragment>
     )
 }
