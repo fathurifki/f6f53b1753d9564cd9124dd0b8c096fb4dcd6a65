@@ -7,7 +7,7 @@ const RenderRating = () => {
             <Ratings
                 rating={3.403}
                 widgetDimensions="16px"
-                widgetSpacings="4px"
+                widgetSpacings="2px"
             >
                 <Ratings.Widget widgetRatedColor="red" />
                 <Ratings.Widget widgetRatedColor="red" />

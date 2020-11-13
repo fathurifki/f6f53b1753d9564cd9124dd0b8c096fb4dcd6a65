@@ -6,6 +6,8 @@ import pin from './pin.png'
 import google from './google-2015.svg'
 import close from './closeblack.svg'
 import down from './down.svg'
+import plus from './plus.svg'
+
 
 const image = {
     back,
@@ -15,7 +17,8 @@ const image = {
     pin,
     google,
     close,
-    down
+    down,
+    plus
 }
 
 export default image

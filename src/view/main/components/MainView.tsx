@@ -6,6 +6,7 @@ import Footer from '../../footer';
 import { MainContext } from '../controller';
 import { address } from 'src/utils/dummyData';
 import { isMobile } from 'src/utils/middleware';
+import '../../../App.css';
 
 
 
@@ -41,21 +42,26 @@ const MainView = () => {
             <div className="h-screen m-auto max-w-md bg-white">
                 <div className="flex flex-col h-screen">
                     <div className="flex flex-col h-screen">
-                        <Header
-                            onClickModal={() => setModal()}
-                            selectedDay={(e: any) => filterFood(e)}
-                            addressDestination={addressDestination}
-                            isMobile={Mobile}
-                        />
-                        <div className="w-full overflow-auto h-screen">
-                            <Body
+                        <div className="shadow-xs">
+                            <Header
+                                onClickModal={() => setModal()}
+                                selectedDay={(e: any) => filterFood(e)}
+                                addressDestination={addressDestination}
+                                isMobile={Mobile}
                                 buttonSwitch={() => setButton()}
                                 buttonLeft={buttonLeft}
                                 buttonRight={buttonRight}
-                                buttonCart={(e: any) => pushToCart(e)}
-                                resultFood={renderResultFood}
-                                setDate={setDate}
                             />
+                        </div>
+                        <div className="w-full overflow-auto h-screen">
+                            <div className="mt-6">
+                                <Body
+                                    buttonCart={(e: any) => pushToCart(e)}
+                                    resultFood={renderResultFood}
+                                    setDate={setDate}
+                                    isMobile={Mobile}
+                                />
+                            </div>
                             {
                                 modal &&
                                 <Modal
@@ -63,11 +69,11 @@ const MainView = () => {
                                     onChange={(e: any) => setLocation(e)}
                                     resultFilter={resultFilterAddress}
                                     setDestiny={(e: any) => setDestiny(e)}
-                                    
+
                                 />
                             }
                         </div>
-                        <div className="flex flex-col">
+                        <div className="bg-gradient-to-b from-white via-white to-transparent block flex flex-col">
                             {
                                 modalCart && <Footer items={countItems} price={countPrice} />
                             }
