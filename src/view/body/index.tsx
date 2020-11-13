@@ -3,7 +3,7 @@ import RenderRating from 'src/components/ratings';
 
 
 
-const Body = ({ buttonSwitch, buttonLeft, buttonRight, buttonCart, resultFood }: any) => {
+const Body = ({ buttonSwitch, buttonLeft, buttonRight, buttonCart, resultFood, setDate }: any) => {
 
     const renderComponent = resultFood.map((val: any, i: any) => {
         return (
@@ -40,6 +40,9 @@ const Body = ({ buttonSwitch, buttonLeft, buttonRight, buttonCart, resultFood }:
                 <div onClick={buttonSwitch} className={`rounded-r-md flex flex-col justify-center items-center text-gray-200 ${buttonRight ? "bg-black" : "bg-white"}  w-1/2 p-4`}>
                     Dinner
                 </div>
+            </div>
+            <div className="font-semibold text-lg pl-4">
+                <p>{setDate}</p>
             </div>
             <div className="flex flex-wrap flex-col p-4 space-y-8">
                 {renderComponent}

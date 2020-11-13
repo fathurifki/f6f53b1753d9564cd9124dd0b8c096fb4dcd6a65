@@ -15,12 +15,14 @@ interface InitialState {
     resultAddress: any
     items: any,
     price: any,
+    addressDestination: string
     setModal: Function
     setButton: Function
     addToCart: Function
     filterFood: Function
     pushToCart: Function
     setLocation: Function
+    setDestiny: Function
 }
 
 const initialState = {
@@ -31,6 +33,7 @@ const initialState = {
     buttonRight: true,
     setDate: "",
     searchLocation: "",
+    addressDestination: "",
     resultFood: [],
     resultAddress: [],
     items: [],
@@ -41,7 +44,7 @@ const initialState = {
     filterFood: () => { },
     pushToCart: () => { },
     setLocation: () => { },
-
+    setDestiny: () => { }
 
 }
 
@@ -53,7 +56,6 @@ export const MainController = ({ children }: any) => {
     const [state, setState] = React.useState<InitialState>(initialState)
     const [items, setItems] = React.useState([])
     const [price, setPrice] = React.useState([])
-
 
     const pushToCart = (e: any) => {
         const name = e.items
@@ -127,6 +129,14 @@ export const MainController = ({ children }: any) => {
 
     }
 
+    const setDestiny = (val: any) => {
+        setState((prevState) => ({
+            ...prevState,
+            addressDestination: val,
+            modal: !state.modal
+        }))
+    }
+
     return (
         <MainProvider value={{
             ...state,
@@ -138,6 +148,7 @@ export const MainController = ({ children }: any) => {
             items,
             price,
             setLocation: setLocation,
+            setDestiny: setDestiny
         }}>
             {children}
         </MainProvider>

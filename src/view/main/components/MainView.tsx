@@ -1,10 +1,11 @@
 import * as React from 'react';
 import Header from '../../header';
 import Body from '../../body';
-import image from 'src/assets/image';
 import Modal from '../../modal';
 import Footer from '../../footer';
 import { MainContext } from '../controller';
+import { address } from 'src/utils/dummyData';
+import { isMobile } from 'src/utils/middleware';
 
 
 
@@ -23,43 +24,17 @@ const MainView = () => {
         items,
         price,
         setLocation,
+        setDate,
         resultAddress,
+        setDestiny,
+        addressDestination
     } = controller
 
     const renderResultFood = resultFood.map((val: any) => val)
     const countItems = items.length
     const countPrice = price.map((val: any) => val).reduce((a: any, b: any) => a + b, 0)
-
-    const address = [
-        {
-            "id": 1,
-            "address": "Kulina",
-            "subAddress": "Jalan Tulodong Atas 28, Senayan, Kebayoran"
-        },
-        {
-            "id": 2,
-            "address": "Kaliurang",
-            "subAddress": "Jalan Kaliurang Atas"
-        },
-        {
-            "id": 3,
-            "address": "Gondomanan",
-            "subAddress": "Jalan Gondomanan"
-        },
-        {
-            "id": 4,
-            "address": "Sayagan",
-            "subAddress": "Jalan Sayegan"
-        },
-        {
-            "id": 5,
-            "address": "Kauman",
-            "subAddress": "Jalan Haji Sarmili"
-        }
-    ]
-
     const resultFilterAddress = !resultAddress.length ? address : resultAddress
-
+    const Mobile = isMobile()
 
     return (
         <div className="bg-gray-200">
@@ -69,6 +44,8 @@ const MainView = () => {
                         <Header
                             onClickModal={() => setModal()}
                             selectedDay={(e: any) => filterFood(e)}
+                            addressDestination={addressDestination}
+                            isMobile={Mobile}
                         />
                         <div className="w-full overflow-auto h-screen">
                             <Body
@@ -77,6 +54,7 @@ const MainView = () => {
                                 buttonRight={buttonRight}
                                 buttonCart={(e: any) => pushToCart(e)}
                                 resultFood={renderResultFood}
+                                setDate={setDate}
                             />
                             {
                                 modal &&
@@ -84,6 +62,8 @@ const MainView = () => {
                                     modalClick={() => setModal()}
                                     onChange={(e: any) => setLocation(e)}
                                     resultFilter={resultFilterAddress}
+                                    setDestiny={(e: any) => setDestiny(e)}
+                                    
                                 />
                             }
                         </div>

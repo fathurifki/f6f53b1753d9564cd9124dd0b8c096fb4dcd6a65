@@ -1,11 +1,11 @@
 import * as React from 'react';
 import image from 'src/assets/image';
 
-const Modal = ({ modalClick, onChange, resultFilter }: any) => {
+const Modal = ({ modalClick, onChange, resultFilter, setDestiny }: any) => {
     const renderComponent = resultFilter.map((val: any, i: any) => {
         return (
             <React.Fragment key={i}>
-                <div className="flex flex-row p-2 mx-4 rounded-lg m-2">
+                <div onClick={() => setDestiny(val.address)} className="flex flex-row p-2 mx-4 rounded-lg m-2 cursor-pointer">
                     <div className="flex flex-col justify-center items-center">
                         <img src={image.pin} width={20} height={20}></img>
                     </div>
