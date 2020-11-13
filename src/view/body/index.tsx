@@ -14,8 +14,8 @@ const Body = () => {
                     Dinner
                 </div>
             </div>
-            <div className="p-4 space-y-8">
-                <div className="bg-white shadow rounded-lg hover:shadow-lg transition duration-200 transform hover:-translate-y-2 overflow-hidden my-2">
+            <div className="flex flex-wrap flex-col p-4 space-y-8">
+                <div className="bg-white shadow rounded-lg hover:shadow-lg transition duration-200 transform hover:-translate-y-2 overflow-hidden">
                     <img alt="imageProp" src="https://picsum.photos/200/300" className="h-48 w-full object-cover object-center"></img>
                     <div className="w-full flex flex-col p-4">
                         <div className="flex flex-row items-center ">
@@ -30,7 +30,7 @@ const Body = () => {
                             </div>
                             <div className="flex flex-col justify-end w-1/2" />
                             <div className="flex flex-col justify-end w-1/2">
-                                <button className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 m-2 focus:outline-none rounded">Look</button>
+                                <button className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 focus:outline-none rounded">Look</button>
                             </div>
                         </div>
                     </div>
