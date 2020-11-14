@@ -43,12 +43,8 @@ const MainView = () => {
 
     const onScroll = () => {
         if (listInnerRef.current) {
-            const { scrollTop, scrollHeight, clientHeight }: any = listInnerRef.current;
-            const bottom = scrollHeight - scrollTop === clientHeight;
-            console.log('CLIENT HEIGHT', clientHeight)
-            if (bottom) {
-                setModalButton(true)
-            } else if (scrollTop) {
+            const { scrollTop, scrollHeight }: any = listInnerRef.current;
+            if (scrollTop) {
                 setModalButton(false)
             } else if (scrollTop === 0) {
                 setModalButton(true)
@@ -79,14 +75,14 @@ const MainView = () => {
                             />
                         </div>
                         <div className="w-full overflow-auto h-screen" onScroll={() => onScroll()} ref={listInnerRef}>
-                            <div className="mt-6">
+                            {/* <div className="mt-6"> */}
                                 <Body
                                     buttonCart={(e: any) => pushToCart(e)}
                                     resultFood={renderResultFood}
                                     setDate={setDate}
                                     isMobile={Mobile}
                                 />
-                            </div>
+                            {/* </div> */}
                             {
                                 modal &&
                                 <Modal
