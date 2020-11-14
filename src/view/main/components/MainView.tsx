@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Header from '../../header';
-import Body from '../../body';
-import Modal from '../../modal';
-import Footer from '../../footer';
+import Header from '../../../components/header';
+import Body from '../../../components/body';
+import Modal from '../../../components/modal';
+import Footer from '../../../components/footer';
 import { MainContext } from '../controller';
 import { address } from 'src/utils/dummyData';
 import { isMobile } from 'src/utils/middleware';

@@ -8,6 +8,7 @@ export const data = [
         "name": "Sweet Pancake",
         "image": image.pancake,
         "price": 15000,
+        "rating": 3.5,
         "date": moment().add(2, 'days').format("dddd. DD MMMM YYYY")
     },
     {
@@ -15,6 +16,7 @@ export const data = [
         "name": "Nachos With Bachamel Sauce ",
         "image": image.nachos,
         "price": 25000,
+        "rating": 2.5,
         "date": moment().add(2, 'days').format("dddd. DD MMMM YYYY")
     },
     {
@@ -22,6 +24,7 @@ export const data = [
         "name": "Spicy Meatball Aldente",
         "image": image.meatball,
         "price": 35000,
+        "rating": 1.5,
         "date": moment().add(2, 'days').format("dddd. DD MMMM YYYY")
     },
     {
@@ -29,6 +32,7 @@ export const data = [
         "name": "Avocado Egg Salad With Holandaise Sauce",
         "image": image.salad,
         "price": 45000,
+        "rating": 1,
         "date": moment().add(2, 'days').format("dddd. DD MMMM YYYY")
     },
     {
@@ -36,6 +40,7 @@ export const data = [
         "name": "Avocado Egg Salad With Holandaise Sauce",
         "image": image.salad,
         "price": 45000,
+        "rating": 2,
         "date": moment().add(2, 'days').format("dddd. DD MMMM YYYY")
     },
     {
@@ -43,6 +48,7 @@ export const data = [
         "name": "Sweet Pancake",
         "image": image.pancake,
         "price": 15000,
+        "rating": 5,
         "date": moment().add(2, 'days').format("dddd. DD MMMM YYYY")
     },
     {
@@ -50,6 +56,7 @@ export const data = [
         "name": "Nachos With Bachamel Sauce ",
         "image": image.nachos,
         "price": 25000,
+        "rating": 4,
         "date": moment().add(3, 'days').format("dddd. DD MMMM YYYY")
     },
     {
@@ -57,6 +64,7 @@ export const data = [
         "name": "Spicy Meatball Aldente",
         "image": image.meatball,
         "price": 35000,
+        "rating": 3.5,
         "date": moment().add(3, 'days').format("dddd. DD MMMM YYYY")
     },
     {
@@ -64,6 +72,7 @@ export const data = [
         "name": "Avocado Egg Salad With Holandaise Sauce",
         "image": image.salad,
         "price": 45000,
+        "rating": 3,
         "date": moment().add(3, 'days').format("dddd. DD MMMM YYYY")
     },
     {
@@ -71,6 +80,7 @@ export const data = [
         "name": "Avocado Egg Salad With Holandaise Sauce",
         "image": image.salad,
         "price": 45000,
+        "rating": 2,
         "date": moment().add(3, 'days').format("dddd. DD MMMM YYYY")
     },
 

@@ -2,6 +2,7 @@ import * as React from 'react';
 import image from 'src/assets/image';
 
 const Modal = ({ modalClick, onChange, resultFilter, setDestiny, isMobile }: any) => {
+    
     const renderComponent = resultFilter.map((val: any, i: any) => {
         return (
             <React.Fragment key={i}>
