@@ -11,8 +11,8 @@ const Modal = ({ modalClick, onChange, resultFilter, setDestiny, isMobile }: any
                         <img alt="iconPin" src={image.pinwhite} width={20} height={10}></img>
                     </div>
                     <div className="ml-4 w-full">
-                        <p>{val.address}</p>
-                        <span>{val.subAddress}</span>
+                        <p font-sans>{val.address}</p>
+                        <span font-sans>{val.subAddress}</span>
                         <hr className="mt-2" />
                     </div>
                 </div>

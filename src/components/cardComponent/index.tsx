@@ -10,14 +10,14 @@ const CardComponent = ({ image, name, price, buttonCart, key, isMobile, iconPlus
                 <img alt="imageProp" src={image} className={`${isMobile ? "h-40" : "h-48"} w-full object-cover object-center`}></img>
                 <div className="w-full flex flex-col p-3 bg-white h-full">
                     <div className="flex flex-row items-center ">
-                        <span className="text-l font-bold mt-1 mr-2 text-custom-custom4 ">{rating}</span>
+                        <span className="text-l font-bold mt-1 mr-2 text-custom-custom4 font-sans">{rating}</span>
                         <RenderRating value={rating}  />
                     </div>
-                    <h3 className="font-semibold tracking-tighter text-gray-700 w-full text-left mt-1 text-xl">{name}</h3>
-                    <p className="pt-0 cursor-default text-custom-custom4 font-medium">by Kulina &middot; Uptown Lunch </p>
+                    <h3 className="font-semibold tracking-tighter text-gray-700 w-full text-left mt-1 text-xl font-sans">{name}</h3>
+                    <p className="pt-0 cursor-default text-custom-custom4 font-medium font-sans">by Kulina &middot; Uptown Lunch </p>
                     <div className="flex flex-row items-center w-full mt-2">
                         <div className="flex flex-col justify-start w-1/2 text-custom-custom3 font-bold text-xl">
-                            <span>{formatPrice(price)}</span>
+                            <span className="font-sans">{formatPrice(price)}</span>
                         </div>
                         <div className="flex flex-col justify-end w-1/2" />
                         <div className={`flex flex-col justify-end ${isMobile ? "w-1/2" : "w-1/3"}`}>

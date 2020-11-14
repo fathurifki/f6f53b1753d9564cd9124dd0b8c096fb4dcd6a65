@@ -23,10 +23,10 @@ const Header = ({ buttonSwitch, buttonLeft, buttonRight, onClickModal, selectedD
             </div>
             <hr className="w-full" />
             <div className="flex flex-row border-2 rounded-md border-custom-custom6 justify-around my-4 mx-4">
-                <div onClick={buttonSwitch} className={`font-bold tracking-wide rounded-l-md flex flex-col justify-center items-center ${buttonLeft ? "bg-custom-custom3" : "bg-white"} ${!buttonLeft ? "text-custom-custom4" : "text-white"} w-1/2 h-full p-2`}>
+                <div onClick={buttonSwitch} className={`font-sans font-bold tracking-wide rounded-l-md flex flex-col justify-center items-center ${buttonLeft ? "bg-custom-custom3" : "bg-white"} ${!buttonLeft ? "text-custom-custom4" : "text-white"} w-1/2 h-full p-2`}>
                     Lunch
                 </div>
-                <div onClick={buttonSwitch} className={`font-bold tracking-wide rounded-r-md flex flex-col justify-center items-center ${buttonRight ? "bg-custom-custom3" : "bg-white"} ${!buttonRight ? "text-custom-custom4" : "text-white"}  w-1/2 p-2`}>
+                <div onClick={buttonSwitch} className={`font-sans font-bold tracking-wide rounded-r-md flex flex-col justify-center items-center ${buttonRight ? "bg-custom-custom3" : "bg-white"} ${!buttonRight ? "text-custom-custom4" : "text-white"}  w-1/2 p-2`}>
                     Dinner
                 </div>
             </div>
