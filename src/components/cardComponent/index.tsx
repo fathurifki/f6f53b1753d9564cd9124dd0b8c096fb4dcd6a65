@@ -3,7 +3,6 @@ import RenderRating from '../ratings';
 import formatPrice from 'src/utils/middleware';
 
 const CardComponent = ({ image, name, price, buttonCart, key, isMobile, iconPlus, rating }: any) => {
-    console.log('RATING', rating)
     return (
         <React.Fragment key={key}>
             <div className="border border-custom-custom6 shadow-md rounded-lg hover:shadow-lg transition duration-200 transform hover:-translate-y-2 overflow-hidden">

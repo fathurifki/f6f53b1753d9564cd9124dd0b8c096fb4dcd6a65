@@ -108,7 +108,6 @@ export default function DatePicker({ endDate, selectDate, getSelectedDay, color,
                     let right = document.getElementById('container');
 
                     if (view) {
-                        console.log('VIEW', view)
                         view.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
                     }
                     if (left) {

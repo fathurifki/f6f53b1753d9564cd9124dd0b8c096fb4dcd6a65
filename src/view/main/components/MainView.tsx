@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+
 import Header from '../../../components/header';
 import Body from '../../../components/body';
 import Modal from '../../../components/modal';
@@ -7,7 +9,6 @@ import { MainContext } from '../controller';
 import { address } from 'src/utils/dummyData';
 import { isMobile } from 'src/utils/middleware';
 import '../../../App.css';
-
 
 
 const MainView = () => {
@@ -38,6 +39,29 @@ const MainView = () => {
     const resultFilterAddress = !resultAddress.length ? address : resultAddress
     const Mobile = isMobile()
 
+    const listInnerRef: any = React.useRef();
+    const [modalButton, setModalButton] = React.useState(false)
+
+    const onScroll = () => {
+        if (listInnerRef.current) {
+            const { scrollTop, scrollHeight, clientHeight }: any = listInnerRef.current;
+            const bottom = scrollHeight - scrollTop === clientHeight;
+            console.log('CLIENT HEIGHT', clientHeight)
+            if (bottom) {
+                setModalButton(true)
+            } else if (scrollTop) {
+                setModalButton(false)
+            } else if (scrollTop === 0) {
+                setModalButton(true)
+            } else if (scrollTop === scrollHeight) {
+                setModalButton(true)
+            } else {
+                setModalButton(false)
+            }
+        }
+    };
+
+
     return (
         <div className="bg-gray-200">
             <div className="h-screen m-auto max-w-md bg-white">
@@ -52,9 +76,10 @@ const MainView = () => {
                                 buttonSwitch={() => setButton()}
                                 buttonLeft={buttonLeft}
                                 buttonRight={buttonRight}
+                                hideButton={modalButton}
                             />
                         </div>
-                        <div className="w-full overflow-auto h-screen">
+                        <div className="w-full overflow-auto h-screen" onScroll={() => onScroll()} ref={listInnerRef}>
                             <div className="mt-6">
                                 <Body
                                     buttonCart={(e: any) => pushToCart(e)}

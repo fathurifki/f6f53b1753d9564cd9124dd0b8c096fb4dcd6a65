@@ -2,8 +2,16 @@ import * as React from 'react';
 import image from '../../assets/image';
 import DatePickers from 'src/components/datePicker';
 
-const Header = ({ buttonSwitch, buttonLeft, buttonRight, onClickModal, selectedDay, addressDestination, isMobile }: any) => {
-    console.log('is mobile', isMobile)
+const Header = ({
+    buttonSwitch,
+    buttonLeft,
+    buttonRight,
+    onClickModal,
+    selectedDay,
+    addressDestination,
+    isMobile,
+    hideButton
+}: any) => {
     return (
         <React.Fragment>
             <div className={`flex flex-row ${isMobile ? "py-2 px-2" : "py-4 px-4"}`}>
@@ -22,14 +30,17 @@ const Header = ({ buttonSwitch, buttonLeft, buttonRight, onClickModal, selectedD
                 <DatePickers selectDate={selectedDay} />
             </div>
             <hr className="w-full" />
-            <div className="flex flex-row border-2 rounded-md border-custom-custom6 justify-around my-4 mx-4">
-                <div onClick={buttonSwitch} className={`font-sans font-bold tracking-wide rounded-l-md flex flex-col justify-center items-center ${buttonLeft ? "bg-custom-custom3" : "bg-white"} ${!buttonLeft ? "text-custom-custom4" : "text-white"} w-1/2 h-full p-2`}>
-                    Lunch
+            {
+                hideButton &&
+                <div className="flex flex-row border-2 rounded-md border-custom-custom6 justify-around my-4 mx-4">
+                    <div onClick={buttonSwitch} className={`font-sans font-bold tracking-wide rounded-l-md flex flex-col justify-center items-center ${buttonLeft ? "bg-custom-custom3" : "bg-white"} ${!buttonLeft ? "text-custom-custom4" : "text-white"} w-1/2 h-full p-2`}>
+                        Lunch
+                    </div>
+                    <div onClick={buttonSwitch} className={`font-sans font-bold tracking-wide rounded-r-md flex flex-col justify-center items-center ${buttonRight ? "bg-custom-custom3" : "bg-white"} ${!buttonRight ? "text-custom-custom4" : "text-white"}  w-1/2 p-2`}>
+                        Dinner
+                    </div>
                 </div>
-                <div onClick={buttonSwitch} className={`font-sans font-bold tracking-wide rounded-r-md flex flex-col justify-center items-center ${buttonRight ? "bg-custom-custom3" : "bg-white"} ${!buttonRight ? "text-custom-custom4" : "text-white"}  w-1/2 p-2`}>
-                    Dinner
-                </div>
-            </div>
+            }
         </React.Fragment>
     )
 }

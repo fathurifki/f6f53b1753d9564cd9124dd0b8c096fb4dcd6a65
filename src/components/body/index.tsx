@@ -1,11 +1,11 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import * as React from 'react';
 import image from 'src/assets/image';
 import CardComponent from 'src/components/cardComponent';
-
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 
 const Body = ({ buttonCart, resultFood, setDate, isMobile }: any) => {
-
 
     const renderComponent = resultFood.map((val: any, i: any) => {
         return (
@@ -24,7 +24,7 @@ const Body = ({ buttonCart, resultFood, setDate, isMobile }: any) => {
         )
     })
     return (
-        <React.Fragment>
+        <React.Fragment >
             <div className={`font-semibold ${isMobile ? "text-md" : "text-lg"} pl-6`}>
                 <p className="text-custom-custom3">{setDate}</p>
             </div>
