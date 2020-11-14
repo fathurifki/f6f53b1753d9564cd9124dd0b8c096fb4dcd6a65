@@ -7,6 +7,14 @@ import google from './google-2015.svg'
 import close from './closeblack.svg'
 import down from './down.svg'
 import plus from './plus.svg'
+import pinloc from './pinloc.svg'
+import pinwhite from './pinwhite.svg'
+import pancake from './pancake.jpg'
+import meatball from './meatball.jpg'
+import nachos from './nachosbig.jpg'
+import salad from './eggsalad.jpg'
+
+
 
 
 const image = {
@@ -18,7 +26,13 @@ const image = {
     google,
     close,
     down,
-    plus
+    plus,
+    pinloc,
+    pinwhite,
+    pancake,
+    meatball,
+    nachos,
+    salad
 }
 
 export default image
