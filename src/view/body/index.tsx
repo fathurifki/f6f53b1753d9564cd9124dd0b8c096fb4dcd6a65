@@ -1,6 +1,7 @@
 import * as React from 'react';
 import RenderRating from 'src/components/ratings';
 import image from 'src/assets/image';
+import formatPrice from 'src/utils/middleware';
 
 
 
@@ -20,7 +21,7 @@ const Body = ({ buttonCart, resultFood, setDate, isMobile }: any) => {
                         <p className="pt-0 cursor-default text-custom-custom4 font-medium">by Kulina Uptown Lunch </p>
                         <div className="flex flex-row items-center w-full mt-2">
                             <div className="flex flex-col justify-start w-1/2 text-custom-custom3 font-bold text-xl">
-                                <span>Rp {val.price}</span>
+                                <span>{formatPrice(val.price)}</span>
                             </div>
                             <div className="flex flex-col justify-end w-1/2" />
                             <div className={`flex flex-col justify-end ${isMobile ? "w-1/2" : "w-1/3"}`}>
