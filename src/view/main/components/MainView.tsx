@@ -69,7 +69,7 @@ const MainView = () => {
                                     onChange={(e: any) => setLocation(e)}
                                     resultFilter={resultFilterAddress}
                                     setDestiny={(e: any) => setDestiny(e)}
-
+                                    isMobile={Mobile}
                                 />
                             }
                         </div>

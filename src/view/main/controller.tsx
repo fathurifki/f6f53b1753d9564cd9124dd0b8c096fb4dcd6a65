@@ -76,7 +76,11 @@ export const MainController = ({ children }: any) => {
             if (value.length >= 3) {
                 return (
                     v.address.toLocaleLowerCase().includes(value) ||
-                    v.subAddress.toLocaleLowerCase().includes(value)
+                    v.subAddress.toLocaleLowerCase().includes(value) ||
+                    v.address.toLocaleUpperCase().includes(value) ||
+                    v.subAddress.toLocaleUpperCase().includes(value) ||
+                    v.address.includes(value) ||
+                    v.subAddress.includes(value)
                 )
             } else if (value.length === 0) {
                 return v

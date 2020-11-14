@@ -11,9 +11,9 @@ const Header = ({ buttonSwitch, buttonLeft, buttonRight, onClickModal, selectedD
                     <img alt="iconBack" src={image.back} width={30} height={30} />
                 </div>
                 <div className="flex flex-col pl-2">
-                    <p className="font-sans text-xs">ALAMAT PENGANTARAN</p>
+                    <p className="font-sans text-xs tracking-tight">ALAMAT PENGANTARAN</p>
                     <div className="flex flex-row" onClick={onClickModal}>
-                        <p className="font-sans  text-custom-custom3 text-xl font-bold tracking-wide">{addressDestination || `Pilih Destinasi`}</p>
+                        <p className="font-sans  text-custom-custom3 text-xl font-bold tracking-tight">{addressDestination || `Pilih Destinasi`}</p>
                         <img alt="iconDown" className="pl-1 cursor-pointer" src={image.down} width={30} height={30} />
                     </div>
                 </div>
