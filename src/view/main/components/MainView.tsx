@@ -39,7 +39,7 @@ const MainView = () => {
     const Mobile = isMobile()
 
     const listInnerRef: any = React.useRef();
-    const [modalButton, setModalButton] = React.useState(false)
+    const [modalButton, setModalButton] = React.useState(true)
 
     const onScroll = () => {
         if (listInnerRef.current) {
