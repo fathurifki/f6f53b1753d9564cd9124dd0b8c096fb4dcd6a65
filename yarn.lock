@@ -9187,10 +9187,9 @@ react-error-overlay@^6.0.8:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.8.tgz#474ed11d04fc6bda3af643447d85e9127ed6b5de"
   integrity sha512-HvPuUQnLp5H7TouGq3kzBeioJmXms1wHy9EGjz2OURWBp4qZO6AfGEcnxts1D/CbwPLRAgTMPCEgYhA3sEM4vw==
 
-react-horizontal-datepicker@^2.0.3:
+"react-horizontal-datepicker@git+https://github.com/fathurifki/react-horizontal-datepicker.git":
   version "2.0.3"
-  resolved "https://registry.yarnpkg.com/react-horizontal-datepicker/-/react-horizontal-datepicker-2.0.3.tgz#bedba3f5176be04b3baef091245c2f6e8f5b3cef"
-  integrity sha512-Ebp82HHQytUc31zBVdSeIUaHbSw5ztuK9dsRDbJldvkzVPTfHXOKbNNoMLMILhjG1Pnsxab1KlN8ENoZxQhjcA==
+  resolved "git+https://github.com/fathurifki/react-horizontal-datepicker.git#782af3ce295d75cafb994e5382f29bf97a69f860"
   dependencies:
     date-fns "^2.14.0"
 

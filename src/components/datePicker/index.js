@@ -1,6 +1,6 @@
 import React from 'react';
+import DatePicker from './DatePicker';
 
-import DatePicker from "react-horizontal-datepicker";
 
 const DatePickers = ({ selectDate }) => {
     return (
