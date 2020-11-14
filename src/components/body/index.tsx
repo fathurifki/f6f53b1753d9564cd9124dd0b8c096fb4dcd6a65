@@ -2,7 +2,6 @@
 import * as React from 'react';
 import image from 'src/assets/image';
 import CardComponent from 'src/components/cardComponent';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 
 const Body = ({ buttonCart, resultFood, setDate, isMobile }: any) => {
