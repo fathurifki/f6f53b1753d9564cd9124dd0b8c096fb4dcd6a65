@@ -101,7 +101,8 @@ export const MainController = ({ children }: any) => {
     const setModal = () => {
         setState((prevState) => ({
             ...prevState,
-            modal: !state.modal
+            modal: !state.modal,
+            items: []
         }))
     }
 
@@ -118,6 +119,8 @@ export const MainController = ({ children }: any) => {
             ...prevState,
             modalCart: !state.modalCart
         }))
+        setItems([])
+        setPrice([])
     }
 
     const filterFood = (val: any) => {

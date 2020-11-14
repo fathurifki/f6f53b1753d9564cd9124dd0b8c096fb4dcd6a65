@@ -28,7 +28,8 @@ const MainView = () => {
         setDate,
         resultAddress,
         setDestiny,
-        addressDestination
+        addressDestination,
+        addToCart
     } = controller
 
     const renderResultFood = resultFood.map((val: any) => val)
@@ -75,7 +76,7 @@ const MainView = () => {
                         </div>
                         <div className="bg-gradient-to-b from-white via-white to-transparent block flex flex-col">
                             {
-                                modalCart && <Footer items={countItems} price={countPrice} />
+                                modalCart && <Footer items={countItems} price={countPrice} onClick={() => addToCart()} />
                             }
                         </div>
                     </div>

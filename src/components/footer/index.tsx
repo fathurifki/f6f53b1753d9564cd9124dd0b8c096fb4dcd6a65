@@ -2,10 +2,10 @@ import * as React from 'react';
 import image from 'src/assets/image';
 import formatPrice from 'src/utils/middleware';
 
-const Footer = ({ items, price }: any) => {
+const Footer = ({ items, price, onClick }: any) => {
     return (
         <React.Fragment>
-            <div className="relative flex rounded flex-row bottom-0 mb-4 justify-between ml-2 mr-2 p-2 max-w-md bg-custom-custom1 text-white">
+            <div onClick={onClick} className="relative flex rounded flex-row bottom-0 mb-4 justify-between ml-2 mr-2 p-2 max-w-md bg-custom-custom1 text-white">
                 <div className="flex flex-col ml-2">
                     <span className="font-bold text-lg tracking-normal font-sans">{items} Items | {formatPrice(price)}</span>
                     <span className="tracking-tight font-sans">Termasuk ongkos kirim</span>
